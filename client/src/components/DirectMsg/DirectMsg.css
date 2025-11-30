@@ -1,0 +1,133 @@
+#galleryModal {
+  z-index: 5000 !important;
+}
+#galleryImg {
+  width: 100%;
+}
+
+.image-upload > input {
+  display: none;
+}
+
+.upload-icon{
+  width: 100px;
+  height: 97px;
+  border: 2px solid #5642BE;
+  border-style: dotted;
+  border-radius: 18px;
+}
+.upload-icon img{
+  width: 90px;
+  height: 87px;
+  margin:5px;
+  cursor: pointer;
+}
+
+
+#DirectMsg-ul {
+  overflow-y: scroll;
+  left: 0;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: calc(100% - 150px);
+}
+
+#DirectMsg-ul > li {
+  flex: 1 0 auto;
+}
+
+.DirectMsg-ul-li-left, .DirectMsg-ul-li-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.DirectMsg-ul-li-left span, .DirectMsg-ul-li-right span {
+  font-size: 10px;
+}
+
+.DirectMsg-ul-li-left {
+  justify-content: start;
+}
+
+.DirectMsg-ul-li-right {
+  justify-content: end;
+}
+
+.DirectMsg-ul-li-center {
+  text-align: center;
+}
+
+.message-bubble-default {
+  background: #ececec;
+  border-radius: 4px;
+}
+
+.message-bubble-user {
+  background: #bbb;
+  position: relative;
+  margin-right: 5px;
+  margin-bottom: 25px;
+  padding-left: 10%;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 0.5rem!important;
+}
+
+.message-bubble-user:after {
+  position: absolute;
+  bottom: -5px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  background-color: #bbb;
+  transform: rotate(45deg);
+  border-radius: 3px;
+  z-index: -100;
+  content: '';
+}
+
+.message-bubble-profile {
+  background: #afe3db;
+  position: relative;
+  margin-right: 5px;
+  margin-bottom: 25px;
+  padding-left: 10%;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 0.5rem!important;
+}
+
+.message-bubble-profile:after {
+  position: absolute;
+  top: 10px;
+  left: -5px;
+  width: 15px;
+  height: 15px;
+  background-color: #afe3db;
+  transform: rotate(45deg);
+  border-radius: 3px;
+  z-index: -100;
+  content: '';
+}
+
+@media (min-width: 992px) {
+  .message-bubble-profile, .message-bubble-user  {
+      text-align: center!important;
+  }
+}
+
+@media (min-width: 768px) {
+  .message-bubble-profile, .message-bubble-user {
+      text-align: left!important;
+  }
+}
+@media (min-width: 768px) {
+  .message-bubble-user {
+      text-align: right!important;
+  }
+}
+
+#DirectMsg-textField {
+  bottom: 45px !important;
+}

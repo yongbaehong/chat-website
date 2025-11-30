@@ -1,0 +1,68 @@
+.Main-hero {
+  background-image: linear-gradient(360deg, #a7a7a7 0%, transparent 80%);
+  padding-bottom: 100px;
+}
+
+.Main-hero h1 {
+  font-family: 'Noteworthy';
+  font-size: 3.65rem;
+}
+
+.Main-link:hover {
+  color: #dff4f1;
+}
+
+
+/* FEATURES */
+.feature-section > h1 > span {
+  letter-spacing: 5px;
+  border-bottom: 3px solid lightgray;
+}
+.feature-imgs {
+  width: 100%;
+  height: auto;
+  clip-path: circle();
+}
+
+
+/* TESTIMONIALS */
+.Testimonials > h1 > span{
+  letter-spacing: 5px;
+  border-bottom: 3px solid lightgray;
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+  .Main-hero {
+    height: auto;
+  }
+    .Main-hero h1 {
+      font-family: 'Noteworthy';
+      font-size: 3rem;
+    }
+  .Main-hero-logo {
+    width: 450px;
+  }
+}
+
+@media (max-width: 500px) and (orientation: portrait) {
+  .Main-hero {
+    height: auto;
+  }
+
+    .Main-hero h1 {
+      font-family: 'Noteworthy';
+      font-size: 2.1rem;
+    }
+
+  .Main-hero-logo {
+    width: 325px !important;
+  }
+}
+
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .Main-hero {
+    height: 100vh;
+    background-color: red;
+  }
+}

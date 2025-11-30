@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1.04167,0,0,1.1236,-4.16667,-12.3596)">
+        <path d="M100,55.5C100,30.94 78.492,11 52,11C25.508,11 4,30.94 4,55.5C4,66.033 8.03,76.225 15.374,84.263L7.773,100L24.071,91.691C32.217,97.095 41.983,100 52,100C78.492,100 100,80.06 100,55.5Z" style="fill:rgb(220,149,68);"/>
+    </g>
+    <g transform="matrix(1.17989,0,0,1.17989,-15.3559,-21.9561)">
+        <text x="17.188px" y="67.271px" style="font-family:'Noteworthy-Bold', 'Noteworthy';font-weight:700;font-size:20.833px;fill:rgb(35,31,32);">Whoop<tspan x="76.381px 86.642px " y="67.271px 67.271px ">s!</tspan></text>
+    </g>
+</svg>

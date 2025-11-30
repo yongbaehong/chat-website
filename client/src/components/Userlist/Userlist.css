@@ -1,0 +1,78 @@
+.Userlist2-container {
+  width: 200px;
+  
+}
+.Userlist-length {
+  color: #769aff;
+}
+
+@media (max-width: 767px) {
+
+  .Userlist-show {
+    transition: width 0.3s, left 0.3s;
+    position: fixed;
+    z-index: 600;
+    width: 100%;
+    top: 0;
+    left: 0px;
+    bottom: 0;
+    background-color: #f0f8e5;
+    box-shadow: inset -1px 0 0 #dbdbdb;
+    transform: translate3d(0,0,0);
+  }
+  
+  .Userlist-show.hide {
+    position: fixed;
+    z-index: -1;
+    width: 0px;
+    top: 55px;
+    left: 0px;
+    bottom: 0;
+    background-color: #f0f8e5;
+    box-shadow: inset -1px 0 0 #dbdbdb;
+    transform: translate3d(0,0,0);
+  }
+  
+  .hide * {
+    display: none !important;
+  }
+
+  .Userlist2-container {
+    background-color: #368dbf;
+  }
+ 
+
+ .Userlist-button-show#Userlist-button {
+    background-color: var(--custom-complementary) !important;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    display: unset !important;
+    z-index: 1000;
+  }
+.Userlist-button-hide {
+    background-color: var(--custom-primary) !important;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    display: unset !important;
+  }
+}
+
+@media (min-width: 768px ) {
+  .Userlist2-container {
+    background-color: #fff;
+    border: 10px solid var(--custom-primary);
+  }
+  .Userlist-button-hide {
+    
+    background-color: red !important;
+    display: none !important;
+  }
+}
+@media (min-width: 992px) {
+  
+}
+@media (min-width: 1200px) {
+
+}

@@ -1,0 +1,11 @@
+#Matches-Container {
+  position: relative;
+}
+
+#Matches-row {
+  margin-bottom: 40px;
+}
+
+#Matches-lastMsg {
+  font-size: 10px;
+}

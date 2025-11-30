@@ -1,0 +1,9 @@
+.Commune-box-shadow {
+  box-shadow: 2px 2px 5px #999;
+  border: 1px solid #ddd;
+}
+
+.Commune-box-shadow:hover, .Commune-box-shadow:active {
+  background: var(--custom-complementary-400);
+  cursor: pointer;
+}

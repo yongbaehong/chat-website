@@ -1,0 +1,7 @@
+#Alerts {
+  z-index: 6000 !important;
+}
+
+.ToastAlert {
+  width: unset !important;
+}

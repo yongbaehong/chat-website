@@ -1,0 +1,41 @@
+.MatchedProfile {
+  transition: all 300ms ease-in;
+  background: lightgray;
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -100;
+  width: 0;
+  top: 0;
+  left: -500px;
+  bottom: 0;
+  transform: translate3d(0,0,0);
+}
+
+.MatchedProfile-show {
+  border-right: 2px solid black;
+  background: white;
+  transition: width 0.3s, left 0.3s, opacity 300ms, visibility 300ms;
+  opacity: 1;
+  visibility: visible;
+  position: fixed;
+  z-index: 1020;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  bottom: 40px;
+  transform: translate3d(0,0,0);
+}
+
+.MatchedProfile-chevron {
+  color: var(--bs-gray-900);
+}
+
+#MatchedProfile-user-info {
+  background: var(--custom-complementary-400);
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+}

@@ -1,0 +1,18 @@
+footer h3 > span {
+  border-bottom: 3px solid lightgray;
+  margin-bottom: 5px;
+}
+
+footer i:hover, footer a:hover, footer i+p > span:hover {
+  color: var(--custom-complementary-400);
+  cursor: pointer;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.socials-header {
+  letter-spacing: 4px;
+}

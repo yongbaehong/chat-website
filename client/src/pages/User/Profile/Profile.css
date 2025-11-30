@@ -1,0 +1,7 @@
+.Profile-container {
+  padding-bottom: 100px;
+}
+
+.img-clip-circle {
+  clip-path: circle(35%);
+}

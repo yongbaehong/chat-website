@@ -1,0 +1,35 @@
+#ChatRoomMsg-ul {
+  overflow-y: scroll;
+  width: 100%;
+  height: calc(100vh - 195px);
+  background-color: #fff;
+}
+
+.ChatRoom-username {
+  color: #769aff;
+}
+
+#ChatRoom-text-input {
+  position: absolute;
+  bottom: -60px;
+  width: calc(100% - 30px);
+}
+
+#ChatRoomMsg {
+  height: calc(100vh - 160px);
+  width: 100%;
+  position: relative;
+}
+
+@media (min-width: 576px) {
+  #ChatRoomMsg {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  #ChatRoomMsg {
+    border: 10px solid var(--custom-primary);
+    border-left: none;
+  }
+}

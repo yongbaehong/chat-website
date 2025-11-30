@@ -1,0 +1,50 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "fix": "eslint . --fix",
+    "seed": "rimraf dist && npm run build && node ./dist/util/seedTest.js",
+    "build": "babel src --out-dir dist",
+    "dev": "nodemon --exec npm run restart",
+    "restart": "rimraf dist && npm run build && npm start",
+    "start": "node dist/index.js",
+    "test": "npm run build && jest ./dist --detectOpenHandles",
+    "test-community": "rimraf dist && npm run build && jest ./dist/resources/communities  --detectOpenHandles",
+    "test-user": "npm run build && jest ./dist/resources/user  --detectOpenHandles",
+    "test-direct-message": "rimraf dist && npm run build && jest ./dist/resources/socket.emit.handlers/direct_message/ --detectOpenHandles",
+    "test-chatroom": "rimraf dist && npm run build && jest ./dist/resources/socket.emit.handlers/chat_room/__test__/ --detectOpenHandles"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "faker": "^5.5.3",
+    "moment": "^2.29.4",
+    "mongoose": "^6.5.2",
+    "morgan": "^1.10.0",
+    "multiparty": "^4.2.3",
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "rimraf": "^3.0.2",
+    "socket.io": "^4.5.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^27.5.1",
+    "socket.io-client": "^4.5.4",
+    "supertest": "^6.2.2"
+  }
+}
