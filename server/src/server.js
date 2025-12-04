@@ -32,7 +32,8 @@ app
   }))
   .use(passport.initialize())
   .use(passport.session())
-  .use(express.static(path.join(__dirname, '/public')));
+  .use(express.static(path.join(__dirname, '/public')))
+  .use(express.static(path.join(__dirname, '../public')));
 
 passportAuth();
 

@@ -7,7 +7,7 @@
     "lint": "eslint .",
     "fix": "eslint . --fix",
     "seed": "rimraf dist && npm run build && node ./dist/util/seedTest.js",
-    "build": "babel src --out-dir dist",
+    "build": "babel src --out-dir dist --copy-files",
     "dev": "nodemon --exec npm run restart",
     "restart": "rimraf dist && npm run build && npm start",
     "start": "node dist/index.js",

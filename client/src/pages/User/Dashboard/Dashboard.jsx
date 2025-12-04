@@ -11,8 +11,8 @@ function Dashboard({ ...props }) {
           <Link to={`/user/SETTINGS_COMMUNITY`} className="w-100 d-flex align-items-center text-decoration-none">
             <Image
               className="Dashboard-image m-2 Dashboard-image-normalize rounded"
-              src="#"
-              alt="concert"
+              src="/chat.png"
+              alt="community"
               fluid
             />
             <div className="Dashboard-text">
@@ -24,8 +24,8 @@ function Dashboard({ ...props }) {
         <Col sm={12} md={6} lg={4} className="box-shadow my-1">
           <Link to={`/user/SETTINGS_MATCHES`} className="w-100 d-flex align-items-center text-decoration-none">
             <Image
-              className="Dashboard-image m-2 Dashboard-image-normalize rounded"
-              src="/Dm.svg"
+              className="Dashboard-image m-2 Dashboard-image-normalize rounded-3"
+              src="/chat2.jpg"
               alt="matches"
               fluid
             />
