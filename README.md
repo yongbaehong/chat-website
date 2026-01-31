@@ -220,4 +220,4 @@ hong-yong-graduate
 ---
 ### Authors and Acknowledgments
 
-This was coded by Yong B. Hong at a LastMile classroom at PBSP. Thanks to the LastMile and PBSP staff for all their help and support. I was able to use the resources provided by the LastMile, such as [devdocs](https://devdocs.io/), [stack overflow](https://stackoverflow.com/), Learning React book by Alex Banks & Eve Porcello, and Express In Action by Evan Hahn to gain insight and knowledge of the basics of what I implemented in my Graduate Project and be inspired to create something new with my ideas.
+This was coded by Yong B. Hong. Thanks to the LastMile for all their help and support. I was able to use the resources provided by the LastMile, such as [devdocs](https://devdocs.io/), [stack overflow](https://stackoverflow.com/), Learning React book by Alex Banks & Eve Porcello, and Express In Action by Evan Hahn to gain insight and knowledge of the basics of what I implemented in my Graduate Project and be inspired to create something new with my ideas.
