@@ -17,7 +17,9 @@ if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir);
 if (!fs.existsSync(userPhotosDir)) fs.mkdirSync(userPhotosDir);
 const mkdir = promisify(fs.mkdir);
 const rename = promisify(fs.rename);
-const rmdir = promisify(fs.rmdir);
+const rmdir = promisify(fs.rm);
+const copyFileAsync = promisify(fs.copyFile);
+const unlinkAsync = promisify(fs.unlink);
 
 // Create one user
 export const createUser = async (req, res, next) => {
@@ -71,7 +73,8 @@ export const createUser = async (req, res, next) => {
            *  */
           req.body = { username: name, password: pw };
           await mkdir(dir);
-          await rename(photo.path, filePath); // fs.rename(oldPath, newPath, callback)
+          await copyFileAsync(photo.path, filePath);
+          await unlinkAsync(photo.path);
           await newUser.save(next);
         }
       } catch (formError) {
@@ -106,7 +109,8 @@ export const updateUserAvatar = async (req, res) => {
         const filePath = `${dir}/${photo.originalFilename}`;
         await rmdir(dir, { recursive: true });
         await mkdir(dir);
-        await rename(photo.path, filePath); // fs.rename(oldPath, newPath, callback)
+        await copyFileAsync(photo.path, filePath);
+        await unlinkAsync(photo.path);
         const { username, _id } = req.user;
         await User.findByIdAndUpdate(_id, { avatar: photo.originalFilename });
         const user = { username, _id };
