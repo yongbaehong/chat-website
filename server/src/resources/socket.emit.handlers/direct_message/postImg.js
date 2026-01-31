@@ -5,6 +5,7 @@ import DirectMsg from '../../direct_msg/direct_msg.model';
 
 const POST_IMG = (io, socket) => async (data) => {
   try {
+    console.log('POST_IMG handler triggered');
     const dmDir = path.resolve(__dirname, '../../../public/', 'dm_photos');
     const photoDir = path.resolve(dmDir, data.dm_id);
     // if 'dm_photos/' does not exist, create directory
@@ -47,6 +48,7 @@ const POST_IMG = (io, socket) => async (data) => {
     }
     // if there is only 1 in dm send receiving socket updates
     if (allSocketInDm.length === 1) {
+      console.log('only one user in dm - sending unseen update to receiving user');
       await socket.emit('EMIT_MSG', dm.messages[dm.messages.length - 1]);
       const otherSocket = await io.fetchSockets();
       const [receivingSocket] = otherSocket.filter((currSocket) => (currSocket.user_id === receivingId));
@@ -56,6 +58,7 @@ const POST_IMG = (io, socket) => async (data) => {
     }
     // both are in dm set all messages.wasSeen to `true` and send all messages
     if (allSocketInDm.length === 2) {
+      console.log('both users in dm - setting msgs to seen');
       await DirectMsg.findByIdAndUpdate(data.dm_id, { 'messages.$[].wasSeen': true }).exec();
       return io.to(dm._id.toString()).emit('EMIT_MSG', dm.messages[dm.messages.length - 1]);
     }
